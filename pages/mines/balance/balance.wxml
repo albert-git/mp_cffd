@@ -1,0 +1,24 @@
+<!--pages/mines/balance/balance.wxml-->
+<view class='zero'>
+  <view class='one'>
+    <view class='one-1' style='align-items:flex-end;flex:0.5'>
+      <image src='/images/balance-2.png' style='width:35rpx;height:35rpx;margin-right:20rpx'></image>
+      <text style='font-size:35rpx;color:white'>余额 (元)</text>
+    </view>
+    <view style='height:1vh'></view>
+    <view class='one-2' style='align-items:flex-start'>
+      <text style='font-size:80rpx;color:white'>500.00</text>
+    </view>
+  </view>
+  <view class='two'>
+    <view class='two-1' wx:for="{{datas}}" wx:key="this" bindtap='onSelect' data-index="{{index}}">
+      <view class='two-1-1'>
+        <image src='{{item.imgSrc}}' style='margin-right:20rpx'></image>
+        <text style='font-size:35rpx'>{{item.txt}}</text>
+      </view>
+      <view class='two-1-2'>
+        <image src='{{item.img2Src}}' style='margin-right:40rpx'></image>
+      </view>
+    </view>
+  </view>
+</view>

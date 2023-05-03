@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "pwd":"/comms/commComponent/changePwd/changePwd"
+  }
+}

@@ -1,0 +1,13 @@
+/* comms/commComponent/listViews/listViews.wxss */
+.outerView {
+  display: flex;
+  width: 90%;
+  margin-left: 40rpx;
+}
+.outerView>view{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  
+}

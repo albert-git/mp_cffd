@@ -1,0 +1,24 @@
+<!--comms/commComponent/selectors/selectors.wxml-->
+<!--下拉列表-->
+<!--
+<view class='select_box' >
+  <view class='select'>
+    <text class='select_text' id="{{selectTxtId}}" bindtap='catchShowTxt'>{{theDataSrc[index].name}}</text>
+    <image id="selectSchoolImg" class='select_img {{show&&"select_img_rotate"}}' src='{{imgSrc}}' bindtap='catchShowTxt'></image>
+  </view>
+  <view class='option_box' style='height:{{show?(theDataSrc.length>5?600:theDataSrc.length*60):0}}rpx;'>
+    <text class='option' style='{{index==theDataSrc.length-1&&"border:0;"}}' wx:for='{{theDataSrc}}' wx:key="this" data-index='{{index}}'               bindtap='catchSelectTxt'>
+      {{item.name}}
+    </text>
+  </view>
+  
+</view>
+-->
+
+<view class='select_box' bindtap='onTap' >
+  <view class='select'>
+    <text class='select_text' id="{{selectTxtId}}"></text>
+    <image id="selectSchoolImg" class='select_img' src='{{imgSrc}}'></image>
+  </view>
+  
+</view>

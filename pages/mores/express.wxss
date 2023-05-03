@@ -1,0 +1,53 @@
+.top {
+  display: flex;
+  background: #e7e7e7;
+  flex-direction: column;
+  
+  align-items: flexs-start;
+  height: 100vh;
+}
+.top>view{
+  display: flex;
+}
+.one{
+  width: 740rpx;
+  height:20vh;
+}
+.two{
+  width:740rpx;
+  background:white;
+  height: 50vh
+  
+  
+}
+
+.two-1 {
+  width: 90%;
+  height: 95rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.three{
+  width:740rpx;
+  height:27vh;
+  margin-top: 25rpx;
+  
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 30rpx;
+}
+.tab-item{
+    font-size: 30rpx;  
+    color: #777777;
+    display:inline-flex;
+    width:200rpx;
+    justify-content:center;
+    align-items:center
+    
+}
+.on{
+  border-bottom:5rpx solid #89d40c
+}
+.swiper{ display: block; height: 100%; width: 100%; overflow: hidden; }  

@@ -1,0 +1,7 @@
+<view class='one' style='background:url("/images/no-discount-2.png") center center no-repeat;'></view>
+<view class="ad-txt">
+  使用代金券消费更优惠
+</view>
+  <view class='two'>
+    <button class='btn' style='width:{{!btnW?600:btnW}}rpx;height:{{!btnH?90:btnH}}rpx;font-family: PingFangSC-Regular;color:{{!txtColor?"white":txtColor}}'>去购买</button>
+  </view>

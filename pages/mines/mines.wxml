@@ -1,0 +1,57 @@
+<view class='top' >
+  <view class='one'>
+    <view class='one-1'>
+      
+      <view style='text-align:center;'>个人中心</view>
+      <!--
+      <view style='text-align:right;font-size:30rpx;color:red;padding-top:8rpx'>退出</view>
+      -->
+    </view>
+    <view class='one-2' bindtap='getInfo'>
+      <image src='/images/userCenter/head-2.png'></image>
+      <text style='margin-left:50rpx;color:white'>洋洋 150xxxx1121\n您还未激活会员权益</text>
+    </view>
+  </view>
+  <view class='two' style='height:auto'>
+    <block wx:for="{{menusA}}" wx:for-item="items" wx:key="this">
+      
+      <view class='loop-view' id="{{items.id}}" bindtap='onSelect'>
+        <view style='display:flex;align-items:center;width:70%'>
+          <image style='width:40rpx;height:52rpx;' src="{{items.imgUrl}}"></image>
+          <text style='margin-left:40rpx;'>{{items.txt}}</text>
+        </view>
+        
+        <view style='width:30%;justify-content:center;display:flex'>
+          <image style='width:20rpx;height:36rpx;' src="{{items.img2Url}}"></image>
+        </view>
+        
+      </view>
+    </block>
+  </view>
+    
+  <view class='three' style='margin-top:30rpx;height:auto'>
+    <block wx:for="{{menusB}}" wx:for-item="items" wx:key="this">
+      
+      <view class='loop-view' id="{{items.id}}" bindtap='onSelect'>
+        <view style='display:flex;align-items:center;width:70%'>
+          <image style='width:40rpx;height:56rpx;' src="{{items.imgUrl}}"></image>
+          <text style='margin-left:40rpx;'>{{items.txt}}</text>
+        </view>
+        
+        <view style='width:30%;justify-content:center;display:flex'>
+          <block wx:if="{{items.showType == 'img'}}">
+            <block wx:if="{{items.balance}}">
+              <text style='margin-left:-90rpx;margin-right:20rpx'>¥{{items.balance}}</text>
+            </block>
+            <image style='width:20rpx;height:36rpx;' src="{{items.img2Url}}"></image>
+          </block>
+          <block wx:if="{{items.showType == 'txt'}}">
+            <text>{{items.img2Url}}</text>
+          </block>
+        </view>
+        
+        
+      </view>
+    </block>
+  </view>
+</view>

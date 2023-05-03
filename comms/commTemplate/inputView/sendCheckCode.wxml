@@ -1,0 +1,14 @@
+<template name="sendCheckCode">
+<view 
+style='width:100%;height:{{!viewHeight?80:viewHeight}}rpx;display:flex;align-items:center;margin-left: {{!marginLeft?40:marginLeft}}rpx;border-bottom:{{!borderBottom?2:borderBottom}}rpx solid whitesmoke'>
+      <view style='display:flex;align-items:center;width:70%' >
+        <view><image src='/images/login/password-2.png' style='width:{{!imgWidth?34:imgWidth}}rpx;height:{{!imgHeight?50:imgHeight}}rpx'></image></view>
+        <view style='margin-left:{{!iptMarginLeft?25:iptMarginLeft}}rpx;'><input placeholder='请输入验证码' style='font-size:{{!iptFontSize?22:iptFontSize}}rpx;width:100%'></input></view>
+      </view>
+      <view style='width:30%;height:100%;align-items:center;justify-items:center;display:flex'>
+        <text style='font-size:{{!txtChectSize?25:txtChectSize}}rpx;width:80%;text-align:center;color:#89d40c' bindtap='{{sendCheckCode}}'>发送验证码</text>
+      </view>
+    </view>
+
+  
+</template>

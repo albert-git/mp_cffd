@@ -1,0 +1,6 @@
+<template name="tabHead" >
+<view style='display: flex;flex-direction: column;width:{{!headW?100:headW}}rpx;height:{{!headH?100:headH}}rpx;align-items: center;'>
+  <image src='{{imgSrc}}' style='width:{{!imgW?56:imgW}}rpx;height:{{!imgH?44:imgH}}rpx'></image>
+  {{imgTxt}}
+</view> 
+</template>

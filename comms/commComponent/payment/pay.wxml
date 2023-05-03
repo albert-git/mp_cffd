@@ -1,0 +1,58 @@
+<import src="../../commTemplate/confirmBtn/confirmBtn" />
+
+<view class='top'>
+  <view class="one" bindtap='paySelect'>
+    <view class='one-1'>支付方式（
+      <text style='font-size:25rpx'>请选择支付方式</text>）</view>
+    <view class="one-2">
+      <image src='{{!payImg?"/images/payment/wechat-2.png":payImg}}' style='width:60rpx;height:54rpx;margin-right:30rpx'></image>
+      {{!payName?'微信支付':payName}}
+      <image src='/images/payment/arrow-right-2.png' style='width:20rpx;height:30rpx;margin-left:425rpx'></image>
+    </view>
+  </view>
+  <view class="two">
+    <view class="two-1">
+      总计：¥{{totalFee}}
+    </view>
+    <view class="two-2" bindtap='payConfirm' data-fee="{{totalFee}}">确认支付</view>
+  </view>
+</view>
+<!--确认地址模态窗口-->
+<view class='addr' style="display:{{!showAddr?'none':showAddr}}" bindtap='showaddr'>
+  <view class='down-one' style='padding-left:0;width:80%;height:35%'>
+    <view class="addr-1">
+      <image src='/images/addr-2.png' style='width:40rpx;height:50rpx;margin-right:15rpx'></image>
+      请核对配送地址
+    </view>
+    <view class="addr-2" style='font-size:35rpx'>
+      上海大学男三院{{addrTxt}}
+    </view>
+    <view class="addr-3">
+      <template is="confirmBtn" data="{{btnTxt:'修改地址',btnW:200,btnH:80,bindFunc:'toAddr'}}" />
+      <template is="confirmBtn" data="{{btnTxt:'确定支付',btnW:200,btnH:80,bindFunc:'confirmBuy'}}" />
+    </view>
+  </view>
+</view>
+
+<!--确认支付方式窗口-->
+<view class="down" style="display:{{!payShow?'none':payShow}};">
+  <view class="down-one">
+    <view class="down-one-1">
+      支付方式（请选择支付方式）
+    </view>
+    <view class="down-one-2">
+      <radio-group bindchange="radioChange" style="display:flex;flex-direction:column;padding-left:50rpx">
+        <label wx:for="{{payChannels}}" wx:key="this" style='display:flex;height:30%;align-items:center'>
+          <image src='{{item.payImg}}' style='width:60rpx;height:54rpx;margin-right:30rpx'></image>
+          {{item.payName}}
+          <radio value="{{index}}" checked="{{index==0?true:false}}" style='margin-left:170rpx' />
+        </label>
+      </radio-group>
+    </view>
+
+    <button style='width:80%;margin-right:90rpx' bindtap='paySelectConfirm'>确定</button>
+
+
+  </view>
+
+</view>

@@ -1,0 +1,35 @@
+
+<view class="top" style='color:{{!expired?"#89d40c":"#A0A0A0"}}'>
+  <scroll-view class="scroll" scroll-y="true" scroll-with-animation='true'>
+    <view class="one">
+      <view wx:for="{{[1,2,3,4,5,1,1,1]}}" wx:key="this" class='one-1' 
+      style='background-image:url("../../../images/payment/discount-expired-3.png");'>
+        <view class="one-1-1">
+          <view class='one-1-1-1'>
+            <view style='display:flex;flex:1;font-size:35rpx'>代金卷</view>
+            <view style='display:flex;flex:1;font-size:25rpx;align-items:center;margin-top:9rpx'>有效期至</view>
+            <!--
+            <text decode='{{true}}'><text style='font-size:35rpx'>代金卷</text>\n
+            <text style='font-size:25rpx'>有效期至</text></text>
+            -->
+          </view>
+          <view class='one-1-1-2'>
+            <text style='font-size:50rpx;line-height:20rpx'><text style='font-size:25rpx'>￥</text>123</text>
+          </view>
+        </view>
+        <view class="one-1-2">
+          <view class="one-1-2-1">
+            <text style='font-size:25rpx;color:#a0a0a0'>仅限餐饮，满10元可用</text>
+          </view>
+          <view class='one-1-2-2'>
+            <button class='btn'>
+              去使用
+            </button>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </scroll-view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view wx:if="{{canIUse}}" class="top">
+    <view class='header' >
+        <image src='/images/logo-3.png'></image>
+    </view>
+ 
+    <view class='content' style="font-family:PingFangSC-Regular;font-size: 40rpx;color:#BABABA;">
+        <text style='align:center'>饿家军申请获取以下权限</text>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+    
+    <button class='bottom' style='background-color:#89d40c' bindtap="onTap">
+        授权登录
+    </button>
+    <!--
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+    -->
+</view>
+ 
+<view wx:else>请升级微信版本</view>

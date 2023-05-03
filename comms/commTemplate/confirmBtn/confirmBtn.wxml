@@ -1,0 +1,6 @@
+<template name="confirmBtn">
+  <view style='display:flex;align-items:center;justify-content:center'>
+    <button 
+    style='justify-content:center;width:{{!btnW?600:btnW}}rpx;height:{{!btnH?90:btnH}}rpx;border-radius:85rpx;background-color:#89d40c;display:flex;align-items:center;font-size:{{!fontSize?35:fontSize}}rpx;font-family: PingFangSC-Regular;color:{{!txtColor?"white":txtColor}}' bindtap='{{bindFunc}}'>{{btnTxt}}</button>
+  </view>
+</template>

@@ -1,0 +1,81 @@
+/* pages/mines/balance/relationOrders/relationOrders.wxss */
+.v-scroll{
+  
+  height: 100vh;
+  width: 100vw;
+  border-top: 1px solid #d2d2d2;
+  
+}
+.one {
+  display: flex;
+  width: 95%;
+  margin-left: 5%;
+  height: 10vh;
+  border-bottom: 1px solid #d2d2d2;
+  align-items: center;
+  font-family: PingFangSC-Regular;
+  color: #282828;
+  justify-content: space-between;
+}
+.one-1{
+  display: flex;
+  
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.one-1-1{
+  display: flex;
+  align-items: flex-end;
+  font-size: 36rpx;
+}
+.one-1-2{
+  display: flex;
+  align-items: flex-start;
+  font-size: 30rpx;
+  color: #9B9B9B;
+}
+.detail{
+  display: flex;
+  position: fixed;
+  top: 0;
+  color: #828282;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(118,118,118,0.8);
+}
+.two {
+   display: flex;
+  border-radius: 24rpx;
+  width: 82vw;
+  height: 66vh;
+  flex-direction: column;
+  background: white;
+}
+.two-1{
+  display: flex;
+  height: 73rpx;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  width: 93%;
+  padding: 20rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  color: #282828;
+  margin-bottom: 30rpx
+}
+.two-2{
+  display: flex;
+  height: 17rpx;
+  font-size: 33rpx;
+  width: 93%;
+  padding: 20rpx;
+  align-items: center;
+  justify-content: space-between;
+  color: #282828;
+}

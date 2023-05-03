@@ -1,0 +1,9 @@
+<!--pages/mines/acctSet/acctSet.wxml-->
+<view class='top'>
+    <view class="one" wx:for="{{cmds}}" wx:key="this" bindtap='onSelect'>
+      <view class='one-1' id="v{{index}}">
+        <view>{{item.cmd}}</view>
+        <view><image src="/images/userCenter/right-arrow-2.png" style='width:25rpx;height:30rpx'></image></view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,81 @@
+<import src="/comms/commTemplate/tabHead/tabHead" />
+<import src="/comms/commTemplate/payment/pay" />
+
+<view class="top" style='font-family: PingFangSC-Regular;font-size:32rpx'>
+  
+  <view class='one'>
+    <image src='/images/userCenter/express-delivery-3.png' style='width:100%;height:100%'></image>
+  </view>
+  <view class="two" style='display:block'>
+    <!--tab选项卡-->
+    <scroll-view scroll-x="true" style="margin-bottom:30rpx;white-space:nowrap;height:120rpx;" bindscrolltolower="scrollToLower" scroll-right="{{scrollRight}}" scroll-left="{{scrollLeft}}">
+
+      <view style='width:369rpx;' wx:for="{{tabs}}" wx:for-item="tabHeadItem" wx:for-index="tabHeadIdx" wx:key="this" class="tab-item {{currentTab==tabHeadIdx ? 'on' : ''}}" data-current="{{tabHeadIdx}}" bindtap="swichNav">
+        <view style='display: flex;width:369rpx;height:100rpx;justify-content:center;align-items: center;'>
+
+          {{tabHeadItem.imgTxt}}
+        </view>
+      </view>
+
+    </scroll-view>
+    <swiper current="{{currentTab}}" class="swiper" duration="300" style="height:60vh;" bindchange="bindChange">
+      <swiper-item>
+
+        <block wx:for="{{logistics}}" wx:key="this">
+          <view style='display:flex;justify-content:center'>
+            <view class='two-1' id="{{item.id}}" bindtap='onSelect' style='border-bottom:1px solid #d2d2d2'>
+              <view style='display:flex;align-item:center;width:70%'>
+                <text style='margin-left:0rpx;'>{{item.txt}}</text>
+              </view>
+              <block wx:if="{{item.type=='img'}}">
+                <view style='width:30%;justify-content:flex-end;display:flex'>
+                  <image style='width:20rpx;height:36rpx;' src="{{item.img}}"></image>
+                </view>
+              </block>
+              <block wx:else>
+                <view style='width:50%;justify-content:flex-end;display:flex'>
+                  <input placeholder='{{item.img}}' style='font-size:30rpx;text-align:right;width:100%;border:0'></input>
+                </view>
+              </block>
+
+            </view>
+          </view>
+        </block>
+      </swiper-item>
+      <swiper-item>
+        <block wx:for="{{address}}" wx:key="this">
+          <view style='display:flex;justify-content:center;font-size:28rpx'>
+            <view class='two-1' id="{{item.id}}" bindtap='onSelect' style='border-bottom:1px solid #d2d2d2'>
+              <block wx:if="{{item.imgSrc.length>1}}">
+                <view style='width:15%;justify-content:flex-start;align-items:center;display:flex'>
+                  <image style='width:80%;height:40rpx;' src="{{item.imgSrc}}"></image>
+                </view>
+                <view style='width:70%;justify-content:flex-start;display:flex'>
+                  <text decode="{{true}}">{{item.txt}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <view style='width:90%;justify-content:flex-start;display:flex'>
+                  <text decode="{{true}}">{{item.txt}}</text>
+                </view>
+              </block>
+              <view style='width:10%;justify-content:flex-end;display:flex'>
+                <image style='width:20rpx;height:36rpx;' src="/images/right-arrow-2.png"></image>
+              </view>
+            </view>
+          </view>
+        </block>
+      </swiper-item>
+
+    </swiper>
+  </view>
+  
+  <view class="three" style='position:fixed;bottom:0'>
+  
+  <template is="pay" data="{{totalFee:20,payChannels:payChannels,payShow:payShow,payName:payName,payImg:payImg}}" />
+  
+  
+  </view>
+
+</view>
+

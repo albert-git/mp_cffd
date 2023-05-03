@@ -1,0 +1,8 @@
+<template name="membersTabHead" >
+
+<view style='display: flex;width:{{!headW?400:headW}}rpx;height:{{!headH?100:headH}}rpx;align-items: center;border:2px solid red'>
+  <image src='{{myIdx==currentTab?imgSrc1:imgSrc0}}' style='width:{{!imgW?44:imgW}}rpx;height:{{!imgH?56:imgH}}rpx'></image>
+  <text style="font-family: PingFangSC-Regular;font-size: 18px;color: {{myIdx==currentTab?'#89d40c':'#8B8B8B'}}">{{imgTxt}}a{{currentTab}}</text>
+</view> 
+
+</template>

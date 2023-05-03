@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "selectors": "/comms/commComponent/selectors/selectors2"
+  },
+  "navigationBarTitleText": "选择地址"
+}

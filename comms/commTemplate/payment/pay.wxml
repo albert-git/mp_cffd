@@ -1,0 +1,44 @@
+<template name="pay">
+  <view style='display:flex;height:100%;width:100%;background:white;flex-direction:column;font-family: PingFangSC-Regular;font-size:30rpx'>
+    <view style='height:60%;display:flex;flex-direction:column;padding-left:50rpx' bindtap='paySelect'>
+      <view style='display:flex;flex:1.7;align-items:flex-end;font-size:33rpx'>支付方式（
+        <text style='font-size:25rpx'>请选择支付方式</text>）</view>
+      <view style="display:flex;flex:2;align-items:center">
+        <image src='{{!payImg?"/images/payment/wechat-2.png":payImg}}' style='width:60rpx;height:54rpx;margin-right:30rpx'></image>
+        {{!payName?'微信支付':payName}}
+        <image src='/images/payment/arrow-right-2.png' style='width:20rpx;height:30rpx;margin-left:425rpx'></image>
+      </view>
+    </view>
+    <!-- padding-bottom:20rpx; -->
+    <view style='height:40%;display:flex;color:white;'>
+      <view style='height:100%;display:flex;flex:2;background-color:#504f53;padding-left:50rpx;align-items:center'>
+        总计：¥{{totalFee}}
+      </view>
+      <view style='height:100%;display:flex;flex:1;justify-content:center;align-items:center;background-color:#89d40c' bindtap='payConfirm' data-fee="{{totalFee}}">确认支付</view>
+    </view>
+  </view>
+
+
+  <view style="position:fixed;width:100%;height:100%;top:0;background-color:rgba(118,118,118,0.8);display:{{!payShow?'none':payShow}};justify-content:center;align-items:center;z-index:999">
+    <view style='width:80%;height:50%;padding-left:50rpx;display:flex;flex-direction:column;background-color:white;border-radius:20rpx'>
+      <view style="display:flex;height:20%;justify-content:center;align-items:center">
+        支付方式（请选择支付方式）
+      </view>
+      <view style="display:flex;height:60%">
+        <radio-group bindchange="radioChange" style="display:flex;flex-direction:column;padding-left:50rpx">
+          <label wx:for="{{payChannels}}" wx:key="this" style='display:flex;height:30%;align-items:center'>
+            <image src='{{item.payImg}}' style='width:60rpx;height:54rpx;margin-right:30rpx'></image>
+            {{item.payName}}
+            <radio value="{{index}}" checked="{{index==0?true:false}}" style='margin-left:170rpx' />
+          </label>
+        </radio-group>
+      </view>
+
+      <button style='width:80%;margin-right:90rpx' bindtap='paySelectConfirm'>确定</button>
+
+
+    </view>
+
+  </view>
+
+</template>

@@ -1,0 +1,23 @@
+<!--pages/mines/balance/recharge/recharge.wxml-->
+<view class='zero'>
+  <view class='head'>现有余额20元</view>
+  <view class="list-container" style="display:flex;flex-wrap:wrap">
+
+    <view wx:for="{{vips}}" wx:key="this" class="one" data-selected="{{index}}" bindtap='selectOne' style="background-color:{{index==whichOne?'#F5FFE5':'white'}};">
+      <!--
+          <view style='display:flex;color:#89d40c;align-items:center;padding-bottom:30rpx'>
+          <view style="display:flex;padding-top:20rpx;flex;font-size:30rpx;justify-content:center;align-items:center;height:50%">
+          -->
+      <view class='one-1'>
+        <text style='font-size:30rpx;padding-top:22rpx;margin-right:-2rpx'>¥</text>
+        <text style='font-size:60rpx;'>{{item.vipPrice}}</text>
+      </view>
+      <view class="one-2">
+        <text>{{item.vipMon}}</text>
+      </view>
+    </view>
+  </view>
+  <view style='display:flex;align-items:center;justify-content:center;margin-top:111rpx'>
+    <button class="btn" bindtap='onTab'>充值并购买</button>
+  </view>
+</view>

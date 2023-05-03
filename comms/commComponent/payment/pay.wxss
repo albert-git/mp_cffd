@@ -1,0 +1,100 @@
+.top {
+  display:flex;
+  height:100%;
+  width:100%;
+  background:white;
+  flex-direction:column;
+  font-family: PingFangSC-Regular;
+  font-size:30rpx;
+}
+.one {
+  height:60%;
+  display:flex;
+  flex-direction:column;
+  padding-left:50rpx; 
+}
+.one-1{
+  display:flex;
+  flex:1.7;
+  align-items:flex-end;
+  font-size:33rpx
+}
+.one-2 {
+  display:flex;
+  flex:2;
+  align-items:center;
+}
+.two{
+  height:40%;
+  display:flex;
+  
+  color:white;
+}
+.two-1{
+  height:100%;
+  display:flex;
+  flex:2;
+  background-color:#504f53;
+  padding-left:50rpx;align-items:center;
+}
+.two-2{
+  height:100%;
+  display:flex;
+  flex:1;
+  justify-content:center;
+  align-items:center;
+  background-color:#89d40c;
+}
+.down,.addr{
+top:0;
+left:0;  
+position:fixed;
+width:100vw;
+height:100vh;
+background-color:rgba(118,118,118,0.8);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+.down-one{
+  width:80%;
+  height:50%;
+  padding-left:50rpx;
+  display:flex;
+  flex-direction:column;
+  background-color:white;
+  border-radius:20rpx
+}
+.down-one-1{
+  display:flex;
+  height:20%;
+  justify-content:center;
+  align-items:center;
+}
+.down-one-2{
+  display:flex;
+  height:60%;
+}
+.addr>view>view{
+  width:100%;
+  flex:1;
+  
+
+}
+.addr-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:33rpx;
+}
+.addr-2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color:#858585;
+}
+.addr-3{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}

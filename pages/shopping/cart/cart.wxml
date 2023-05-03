@@ -1,0 +1,48 @@
+<!--pages/shopping/cart/cart.wxml-->
+<import src="../../../comms/commTemplate/payment/pay" />
+<view style='display:block;height:100vh;align-items:space-between;flex-direction:column'>
+  <view style='height:70vh'>
+    <scroll-view scroll-y="true">
+      <view class='top'>
+        <block wx:for="{{goods}}" wx:key="this">
+          <view class='one'>
+            <view class='one-1'>
+              <view class='one-1-1'>【午餐】{{item.name}}</view>
+              <view class="one-1-2">
+                <view class='one-1-2-1' bindtap='modiOrderNum'>
+                  <image src='/images/sub-2.png' id="sub" data-item="{{index}}"></image>
+                  <view id="abc" disabled="true">{{item.orderNum}}</view>
+                  <image src='/images/plus-2.png' id="plus" data-item="{{index}}"></image>
+                </view>
+                <view class="one-1-2-2">
+                  ¥{{item.priceNew*item.orderNum}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view style='display:flex;flex-direction:column;align-items:flex-end;height:30vh;justify-content:flex-end;padding-top:20rpx'>
+    
+    <view class='ad-img' style='background-image: url("/images/members-entry-2.png") ;'>
+      <view class="ad-img-txt">
+        开通会员，最高可优惠12元
+      </view>
+      <view class='ad-img-img'>
+        <image src='/images/members-2.png'></image>
+        <view style='width:15rpx;'></view>
+        <image src='/images/members-arrow-2.png' style='width:10rpx;height:18rpx;'></image>
+      </view>
+    </view>
+    <view class="pay" style='dispaly:flex;width:750rpx;height:300rpx;justiry-content:center;position:relative'>
+      <!--
+      <template is="pay" />
+      -->
+      <pay id="payid" addrTxt="haha" />
+    </view>
+    
+  </view>
+  
+</view>

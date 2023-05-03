@@ -1,0 +1,47 @@
+<!--pages/login/addAddr/addAddr.wxml-->
+<import src="/comms/commTemplate/confirmBtn/confirmBtn" />
+<view class='parent' style='display:flex'>
+  <view class='v-img' style='margin-bottom:20rpx'>
+    <image src='/images/login/addr-2.png' style='width:100rpx;height:115rpx'></image>
+  </view>
+  <!--冒泡扑获catchtap-->
+  <view class='v-data' style='margin-bottom:50rpx'>
+    
+    <view wx:for="{{items}}" wx:key="this" style='margin-top:30rpx'>
+      <text class='txt-size'>{{item}}</text>
+      <selectors style="width:80%" bind:onSelectAddr="selectAddr" data-addr="addr-{{index}}" />
+    </view>
+    <!--
+    <view  >
+      <text class='txt-size'>学校</text>
+      <selectors outerData="{{selectData}}" style="width:80%"></selectors>
+    </view>
+    <view style='margin-top:30rpx'>
+      <text class='txt-size'>园区</text>
+      <selectors style="width:80%"></selectors>
+    </view>
+    <view style='margin-top:30rpx'>
+      <text class='txt-size'>栋数</text>
+      <selectors  style="width:80%"></selectors>
+    </view>
+    <view style='margin-top:30rpx'>
+      <text class='txt-size'>宿舍</text>
+      <selectors style="width:80%"></selectors>
+    </view>
+    
+    <view style='margin-top:30rpx'>
+      <text class='txt-size'>地址</text>
+      <input style='width:70%' placeholder='示例：南区宿舍14栋' placeholder-style='text-align:right;font-size:15px'></input>
+    </view>
+    -->
+  </view>
+  <!--
+  <view class='v-btn'>
+    <button style='display:flex;align-items:center;justify-content:center' bindtap='toAddData'>
+      <text style='color:white;'>下一步</text>
+    </button>
+  </view>
+  -->
+  <template is="confirmBtn" data="{{btnTxt:'下一步',bindFunc:'toAddData'}}" />
+</view>
+

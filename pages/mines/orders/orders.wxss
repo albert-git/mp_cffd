@@ -1,0 +1,153 @@
+/* pages/mines/orders/orders.wxss */
+::-webkit-scrollbar{
+   width: 0;
+  height: 0;
+  color: transparent;
+}
+.list-head{
+  width: 100%;
+  height:2vh;
+  background: #e7e7e7
+}
+.zero {
+  display: flex;
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  justify-content: flex-end;
+  align-items: center;
+  height: 12vh
+}
+.zero view{
+  display: flex;
+}
+
+.one {
+  height: 60%;
+  width: 97%;
+  padding-bottom: 1vh;
+  border-bottom: 1px solid #d2d2d2
+}
+
+.one-1{
+  padding-top: 2vh;
+}
+.one-2{
+  font-family: PingFangSC-Regular;
+}
+.one-3,one-4{
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.one-3 text,.one-4 text{
+  display: flex;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pop{
+  display: flex;
+  position: fixed;
+  top:0;
+   color: #828282;
+  
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(118,118,118,0.8);
+}
+.pop-one{
+  display: flex;
+  border-radius: 40rpx;
+  width: 82vw;
+  height: 70vh;
+  flex-direction: column;
+  background: white;
+}
+.pop-one-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  border-bottom: 1px solid #d2d2d2;
+}
+.pop-one-2{
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+.scroll{
+  height:100%;
+  width:100%
+}
+.scroll-1{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d2d2d2;
+  height:13vh;
+}
+.scroll-1>view{
+  margin: 20rpx 35rpx;
+}
+.scroll-1-1{
+  display: flex;
+  flex:1.5;
+  
+  font-family: PingFangSC-Regular;
+  justify-content: space-between;
+}
+.scroll-1-1-1{
+  display: flex;
+  flex:2.5;
+  font-size: 32rpx;
+  align-items: center;
+}
+.scroll-1-1-2{
+  display: flex;
+  flex: 1.5;
+  font-size: 32rpx;
+  justify-content: flex-end;
+  align-items: center
+}
+.scroll-1-2{
+  display: flex;
+  
+  flex:2;
+  justify-content: space-between
+}
+.scroll-1-2-1{
+  display: flex;
+  margin-left: 15rpx;
+  flex: 2.5;
+  font-size: 25rpx;
+  flex-direction: column;
+}
+.scroll-1-2-1>view{
+  display: flex;
+  flex: 1
+}
+.scroll-1-2-2{
+  display: flex;
+  align-items: center;
+}
+.scroll-2{
+  font-family: PingFangSC-Regular;
+  font-size: 27rpx;
+  display: flex;
+  margin: 30rpx;
+  justify-content: center;
+  color: #828282;
+  flex-direction: column;
+  width: 90%;
+  
+}
+.scroll-2>view{
+  display: flex;
+  justify-content: space-between;
+  flex:1;
+  margin-left: 18rpx;
+}

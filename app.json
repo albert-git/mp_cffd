@@ -1,0 +1,71 @@
+{
+  "pages": [
+    
+    
+    "pages/smarket/shopping",
+    "pages/demo/demo",
+    "pages/login/login",
+    "pages/addr/addr",
+    "pages/shopping/shopping",
+    "pages/index/index",
+    "pages/mores/members",
+    "pages/login/addAddr/addAddr",
+    "pages/shopping/cart/cart",
+    "pages/mores/express",
+    "pages/mines/mines",
+    "pages/mines/address/address",
+    "pages/mores/mores",
+    "pages/payment/success",
+    "pages/login/phoneLogin/phoneLogin",
+    "pages/login/addData/addData",
+    "pages/login/codeLogin/codeLogin",
+    "pages/mines/orders/orders",
+    "pages/mines/acctSet/acctSet",
+    "pages/payment/fail",
+    "pages/mines/acctSet/changePhone/changePhone",
+    "pages/mines/discount/discount",
+    "pages/mines/discount/noDiscount",
+    "pages/mines/acctSet/changePwd/changePwd",
+    "pages/mores/water",
+    "pages/mines/balance/balance",
+    "pages/mines/balance/relationOrders/relationOrders",
+    "pages/mines/balance/recharge/recharge",
+    "pages/mines/balance/cash/cash",
+    "pages/smarket/cart/cart"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/smarket/shopping",
+        "text": "餐饮",
+        "iconPath": "images/tabbar/sMarket-1.png",
+        "selectedIconPath": "images/tabbar/sMarket-2.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "超市",
+        "iconPath": "images/tabbar/food-1.png",
+        "selectedIconPath": "images/tabbar/food-2.png"
+      },
+      {
+        "pagePath": "pages/mores/mores",
+        "text": "更多",
+        "iconPath": "images/tabbar/more-1.png",
+        "selectedIconPath": "images/tabbar/more-2.png"
+      },
+      {
+        "pagePath": "pages/mines/mines",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine-1.png",
+        "selectedIconPath": "images/tabbar/mine-2.png"
+      }
+    ]
+  }
+}

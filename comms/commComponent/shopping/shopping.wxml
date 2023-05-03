@@ -1,0 +1,43 @@
+<!--动画绿十字-->
+<image src='/images/products/add-2.png' class='move-img' style='z-index:9999;display:{{!showMe?"None":"flex"}};left:{{moveLeft-10}}px;top:{{moveTop-10}}px'>
+</image>
+
+<scroll-view  class='my-scroll-view' scroll-y="true" upper-threshold="1vh" bindscrolltoupper="onUpper" bindscrolltolower="loadMore" scroll-with-animation='true'>
+  <view class="list-container" style='height:100.5%;'>
+
+    <view wx:for="{{imgs}}" wx:key="this" >
+      <view 
+      style='position:absolute;bottom:22rpx;right:0px;height:105rpx;width:125rpx;'
+      bindtap='buyIt' id="{{index}}-{{item.id}}" data-item="{{item}}" data-buy="#buy{{index}}-{{item.id}}">  </view>
+      <view class="vimg" style=''>
+        <view class="cover-zero" style="display:{{imgs[index].num==0?'flex':'none'}}">售罄</view>
+        <image src='{{foodPath + item.img}}' bindtap='showDetail' data-detail="{{item}}"></image>
+        <view class="product-storage">
+          <text decode='{{true}}'>库存&nbsp;{{!eleId?item.num:(eleId[0]==item.id?eleId[1]:imgs[index].num)}}</text>
+        </view>
+      </view>
+      <view class="vlable">
+        <view class="lable-name" style='margin-bottom:-15rpx'>
+          <text style='font-family: PingFangSC-Regular;font-size:35rpx'>{{item.name}}</text>
+          <image src='/images/products/add-2.png' 
+          style='width:40rpx;height:40rpx;margin-right:40rpx' 
+          id="buy{{index}}-{{item.id}}"
+          >
+          <!-- bindtap='buyIt' id="{{index}}-{{item.id}}" data-item="{{item}}"> -->
+          </image>
+        </view>
+        <view class='lable-price'>
+          {{"原价 ￥"+item.priceOld}}
+          <text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text> {{ "会员价 ￥" + item.priceNew}}
+        </view>
+      </view>
+    </view>
+    <!--
+
+    <view style="width:100%;height:60rpx;text-align:center;background-color: #eee;hidden:{{hidden}}" class="ld">
+      数据加载中...
+    </view>
+    -->
+  </view>
+
+</scroll-view>

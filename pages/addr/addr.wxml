@@ -1,0 +1,19 @@
+<import src="/comms/commTemplate/confirmBtn/confirmBtn" />
+<view class='parent' style='display:flex'>
+  <view class='v-img' style='margin-bottom:20rpx'>
+    <image src='/images/login/addr-2.png' style='width:100rpx;height:115rpx'></image>
+  </view>
+  <!--冒泡扑获catchtap-->
+  <view class='v-data' style='margin-bottom:50rpx'>
+
+    <view wx:for="{{items}}" wx:key="this" style='margin-top:30rpx'>
+      <text class='txt-size'>{{item}}</text>
+      <selectors style="width:80%" bind:onSelectAddr="selectAddr" addrs="{{[1,2,3]}}" data-addr="addr-{{index}}" />
+    </view>
+
+  </view>
+
+  <view style='display:flex;align-items:center;justify-content:center'>
+    <button style='justify-content:center;width:{{!btnW?600:btnW}}rpx;height:{{!btnH?90:btnH}}rpx;border-radius:85rpx;background-color:#89d40c;display:flex;align-items:center;font-family: PingFangSC-Regular;color:{{!txtColor?"white":txtColor}}' bindtap='onTab'>{{!btnTxt?'确定':btnTxt}}</button>
+  </view>
+</view>

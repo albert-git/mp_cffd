@@ -1,0 +1,78 @@
+/* pages/shopping/shopping.wxss */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.swiper-tab{
+    
+    width: 100%;  
+    text-align: center;  
+    line-height: 80rpx;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tab-item{
+    font-size: 30rpx;  
+    color: #777777;
+    display:inline-flex;
+    width:200rpx;
+    justify-content:center;
+    align-items:center
+    
+}
+.on{
+    
+    border-bottom:5rpx solid #89d40c
+}
+.swiper{ display: block; height: 100%; width: 100%; overflow: hidden; }
+
+swiper-item{
+  overflow:scroll;
+  overflow-y:visible
+}  
+.swiper view{  
+    text-align: center; 
+    
+}  
+
+
+.v-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105rpx;
+  height: 105rpx;
+  top: 750rpx;
+  left: 630rpx;
+  z-index: 99;
+  position: fixed;
+  border-radius: 100%;
+  background: #fff;
+  border: 2rpx solid #d7d7d7;
+  opacity: 0.8;
+}
+
+.cart {
+  width: 75rpx;
+  height: 75rpx;
+  background: #fff;
+  margin-right:-30rpx;
+}
+
+
+.red-dot {
+  border-radius:100%;
+  display:flex;
+  background-color: #ff244e;
+  width:25rpx;
+  height:25rpx;
+  margin-top:-70rpx;
+  font-size:17rpx;
+  justify-content: center;
+  align-items: center;
+}  

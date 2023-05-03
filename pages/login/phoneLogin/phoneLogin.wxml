@@ -1,0 +1,32 @@
+<!--pages/login/phoneLogin/phoneLogin.wxml-->
+<import src="/comms/commTemplate/members/vouchers" />
+<view class='top'>
+  <view>
+
+  </view>
+  <view class='header '>
+    <image src='/images/logo/logo_3.png'></image>
+  </view>
+  <view class='addr'>
+    
+    <view class='addr-1' style='border-bottom:2rpx solid whitesmoke'>
+        <view><image src='/images/login/phone-2.png' style='width:34rpx;height:50rpx'></image></view>
+        <view style='margin-left:25rpx;width:90%'><input bindinput='phoneInput' maxlength="15" placeholder='请输入手机号' style='font-size:30rpx;width:100%'></input></view>
+    </view>
+    
+    <view class='addr-2'>
+      <view class="pwd" style='width:100%' >
+        <view><image src='/images/login/password-2.png' style='width:34rpx;height:50rpx'></image></view>
+        <view style='margin-left:25rpx;'><input bindinput='pwdInput' password="true" placeholder='请输入密码' style='font-size:30rpx;width:100%'></input></view>
+      </view>
+      
+    </view>
+  </view>
+  
+  <view class='btn' style='margin-top:100rpx'>
+    <button style='display:flex;align-items:center;justify-content:center' bindtap='loginWithPhone'>
+      <text style='color:white;' decode='true'>登录</text>
+    </button>
+  </view>
+  <text style='margin-top:40rpx;color:#89d40c;font-size:30rpx' bindtap='checkCodeLogin'>{{abc}}忘记密码？短信验证码登录</text>
+</view>

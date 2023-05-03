@@ -1,0 +1,4 @@
+<!--pages/mores/water.wxml-->
+<import src="/comms/commTemplate/bottledWater/bottledWater" />
+
+<template is="bottledWater" data="{{btnTxt:'来一桶'}}" />

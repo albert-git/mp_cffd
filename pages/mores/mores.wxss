@@ -1,0 +1,19 @@
+/* pages/mores/mores.wxss */
+.my-view{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10rpx
+  
+}
+.grid-view {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+  height: 200rpx;
+  justify-content: center;
+  align-items: center;
+  border: 0.5rpx solid rgba(216, 216, 216, 0.36)
+  
+  
+}

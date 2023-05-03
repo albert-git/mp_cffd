@@ -1,0 +1,60 @@
+<!--pages/mines/orders/orders.wxml-->
+<scroll-view scroll-y="true" style='width:100vw;height:100vh'>
+ <view class='list-head'></view>
+ <view class='zero' wx:for="{{'aaaaaaaa'}}" wx:key="this" bindtap='onSelect'>
+    <view class='one'>
+      <view class='one-1' style='flex:0.5'>
+        <view style='border:1px solid #89d40c;background:#89d40c;border-radius:100%;width:1vh;height:1vh'></view>
+      </view>
+      <view class='one-2' style='flex:7;flex-direction:column'>
+        <view style='flex:1;display:flex;font-size:40rpx'>abc</view>
+        <view style='flex:1;display:flex;align-items:flex-start;font-size:27rpx;padding-top:0.5vh'>123</view>
+        
+      </view>
+      <view class='one-3' style='flex:4'>
+        <text>已支付</text>
+        <image src='/images/detail-2.png' style='width:5.5vh;height:3.5vh;margin-left:1vh;padding-top:0.5vh'></image>
+      </view>
+      <view class='one-4' style='flex:3;justify-content:center'>
+        <text style='justify-content:center'>¥2.00</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!--弹出订单详细-->
+<view class='pop' style='display:{{!showDetail?"none":showDetail}}' bindtap='onHidden'>
+  <view class='pop-one'>
+    <view class='pop-one-1'>
+      <image src='/images/addr-2.png' style='width:36rpx;height:42rpx'></image>
+      <text style='margin-left:20rpx;color:black'>配送地址：男二院2栋104号</text>
+    </view>
+    <view class='pop-one-2'>
+      <scroll-view class='scroll' scroll-y="true">
+        <view class='scroll-1' wx:for="{{'111'}}" wx:key="this">
+          <view class='scroll-1-1'>
+            <view class='scroll-1-1-1'>【午餐】红烧肉套餐</view>
+            <view class='scroll-1-1-2'>x1</view>
+          </view>
+          <view class='scroll-1-2' style='margin-top:0'>
+            <view class="scroll-1-2-1">
+              <view class='v-up' style='align-items:flex-start;margin-bottom:19rpx;margin-top:-1rpx'>单价：¥2.00</view>
+              <view class='v-down'>2018-11-20   12:30:00</view>
+            </view>  
+            <view class='scroll-1-2-2'>
+              <image src='/images/refund-2.png' style='width:70rpx;height:42rpx;margin-right:45rpx'></image>
+              <image src='/images/urge-2.png' style='width:70rpx;height:42rpx'></image>
+            </view>
+          </view>
+        </view>
+        
+        <view class='scroll-2'>
+          <view wx:for="{{'1234'}}" wx:key="this">
+            <view>总金额：</view>
+            <view>¥10.00</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

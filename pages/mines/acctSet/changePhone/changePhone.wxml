@@ -1,0 +1,19 @@
+<!--pages/mines/acctSet/changePhone/changePhone.wxml-->
+
+<view class='top'>
+  <view class='one'>
+    <view class='one-1'>当前手机号</view>
+    <view class='one-2'>
+      <text>11111111111</text>
+    </view>
+  </view>
+  <view class="two">
+    <view class='two-1'>更换新号码</view>
+    <view class='two-2'>
+      <input placeholder='请输入11位号码' maxlength='11' type="number" bindinput='{{getInput}}' style='font-size:30rpx;width:100%;border:0;'></input>
+    </view>
+  </view>
+</view>
+<view style='display:flex;flex:1;justify-content:center;align-items:center;margin-top:5rpx'>
+  <button bindtap='onGo' style='justify-content:center;width:{{!btnW?600:btnW}}rpx;height:{{!btnH?80:btnH}}rpx;border-radius:85rpx;background-color:#89d40c;display:flex;align-items:center;font-family: PingFangSC-Regular;color:{{!txtColor?"white":txtColor}}'>保存</button>
+</view>

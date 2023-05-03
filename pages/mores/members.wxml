@@ -1,0 +1,56 @@
+<import src="/comms/commTemplate/members/vouchers" />
+<import src="/comms/commTemplate/payment/pay" />
+<image src='/images/members/members-2.png' style='width:100%;height:15vh'>
+</image>
+<scroll-view scroll-x="true" style="white-space:nowrap;height:10vh;">
+  <view wx:for="{{tabs}}" wx:for-item="tabHeadItem" wx:for-index="tabHeadIdx" wx:key="this" class="tab-item {{currentTab==tabHeadIdx ? 'on' : ''}}" data-current="{{tabHeadIdx}}" data-describe="{{tabHeadItem.describe}}" data-direction="{{tabHeadItem.direction}}"
+    bindtap="swichNav" style='width:49%;'>
+
+    <view style='display: flex;height:80rpx;align-items: center;'>
+      <image src='{{tabHeadIdx==currentTab?tabHeadItem.imgSrc1:tabHeadItem.imgSrc0}}' style='width:56rpx;height:50rpx;margin-right:15rpx'></image>
+      <text style="font-family: PingFangSC-Regular;font-size: 40rpx;color: {{tabHeadIdx==currentTab?'#89d40c':'#8B8B8B'}}">{{tabHeadItem.imgTxt}}</text>
+    </view>
+  </view>
+</scroll-view>
+
+<view style='display:flex;justify-content:center;align-items:flex-end;font-family: PingFangSC-Regular;font-size: 30rpx;color: #9B9B9B;margin-top:4rpx'>{{describeTxt}}</view>
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:40vh;margin-top:25rpx" bindchange="bindChange">
+  <swiper-item>
+    <scroll-view class='my-scroll-view' scroll-y="true" bindscrolltolower="loadMore" scroll-with-animation='true'>
+      <view class="list-container" style="display:flex;flex-wrap:wrap" >
+        <view wx:for="{{vips}}" wx:key="this" class="v-vips" data-selected="{{index}}" 
+        bindtap='selectOne' 
+        style="background-color:{{index==whichOne?'#F5FFE5':'white'}};">
+          <image style='position:absolute;top:0;right:0;width:56rpx;height:34rpx;display:{{!item.recommend?"none":"block"}}' src='/images/members/recommend-2.png'></image>
+          <view style="display:flex;padding-top:20rpx;flex;font-size:30rpx;justify-content:center;align-items:center;height:50%">
+            <text>{{item.vipMon}}</text>
+          </view>
+          <view style='display:flex;color:#89d40c;align-items:center;padding-bottom:30rpx'>
+            <text style='font-size:30rpx;padding-top:26rpx'>¥</text>
+            <text style='font-size:60rpx;'>{{item.vipPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <view wx:for="{{vouchers}}" wx:key="this" style='display:flex;position:relative;background-color:rgba(137,212,12,{{mySelected==index?0.13:0}});font-family: PingFangSC-Regular;' bindtap='selectVoucher' data-voucher="{{index}}">
+      <view style='position:absolute;top:15rpx;left:60rpx;'>
+        <text style='font-size:30rpx;color:#89d40c'>¥</text>
+        <text style='font-size: 50rpx;color:#89d40c'>{{item.voucherPrice}}</text>
+      </view>
+      <view style="position:absolute;top:25rpx;left:350rpx;color:{{mySelected==index?'#89d40c':'#767676'}}">
+        <text>{{item.voucherDescribe}}</text>
+      </view>
+      <image src='/images/members/voucher-on-3.png' style='height:100rpx;width:750rpx;'></image>
+    </view>
+  </swiper-item>
+
+</swiper>
+<view style='height:50rpx;background-color:#e7e7e7'></view>
+<view style='width:100%;height:25vh;justify-content:center;position:absolute;bottom:0'>
+  <!--
+  <template is="pay" data="{{totalFee:20,payChannels:payChannels,payShow:payShow,howto:howto,payName:payName,payImg:payImg}}" />
+  -->
+  <pay id="payid" showModiAddr="none"  />
+</view>

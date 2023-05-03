@@ -1,0 +1,60 @@
+/* pages/login/codeLogin/codeLogin.wxss */
+page {
+  height: 100%;
+}
+
+.top {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gainsboro;
+}
+.header {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    
+}
+ 
+.header image {
+    width: 264rpx;
+    height: 72rpx;
+}
+ 
+.addr {
+  height: 17%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.addr > view {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  
+}
+.addr-1,.addr-2{
+  margin-left: 40rpx;
+}
+.addr-1,.addr-2,.pwd {
+  display: flex;
+  height: 100%;
+  align-items: center;
+    
+}
+.btn {
+  width:80%;
+  height:70rpx;
+  margin-top: 60rpx;
+  
+}
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 85rpx;
+  background-color: #89d40c
+}

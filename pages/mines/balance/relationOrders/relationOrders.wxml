@@ -1,0 +1,23 @@
+<!--pages/mines/balance/relationOrders/relationOrders.wxml-->
+<scroll-view scroll-y="true" class='v-scroll'>
+  <view class='one' wx:for="{{'1231'}}" bindtap='onSelect' data-index="{{index}}">
+    <view class='one-1'>
+      <view class="one-1-1">1111</view>
+      <view class='one-1-2'>222</view>
+    </view>
+    <text style='font-size:35rpx;margin-right:40rpx'>+ 200.00</text>
+  </view>
+</scroll-view>
+<view class='detail' style='display:{{!showDetail?"none":showDetail}}' bindtap='onHidden'>
+  <view class='two'>
+    <view class='two-1'>
+      <text style='font-size:35rpx'>入账金额</text>
+      <text>200.00</text>
+    </view>
+    <view wx:for="{{'123'}}" wx:key="this" class='two-2'>
+      <text>111</text>
+      <text>222</text>
+    </view>
+  </view>
+
+</view>

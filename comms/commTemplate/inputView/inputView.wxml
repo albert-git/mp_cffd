@@ -1,0 +1,11 @@
+ <template name="inputView">
+  <view  
+    style='width:100%;height:{{viewHeight}}rpx;display:flex;align-items:center;margin-left: 40rpx;border-bottom:{{borderBottom}}rpx solid whitesmoke'>
+    <view>
+      <image src='{{imgUrl}}' style='width:{{imgWidth}}rpx;height:{{imgHeight}}rpx'></image>
+    </view>
+    <view style='margin-left:25rpx;width:90%'>
+      <input placeholder='{{placeHolder}}' password='{{!pwdFlag?false:pwdFlag}}' maxlength='{{!maxLength?20:maxLength}}' type="{{!inputType?'text':inputType}}" bindinput='{{getInput}}' style='font-size:22rpx;width:100%'></input>
+    </view>
+  </view>
+</template>

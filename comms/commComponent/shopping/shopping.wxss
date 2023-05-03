@@ -1,0 +1,145 @@
+/*
+::-webkit-scrollbar
+{
+width: 6px;
+height: 6px;
+background-color: #be3434;
+}
+*/
+.my-scroll-view{
+  height:100%;
+  width:100%;
+  
+  
+}
+.list-container { 
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+
+.list-container>view:not(.ld) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360rpx;
+  height: 300rpx;
+  margin-left: 10rpx;
+}
+
+
+.vimg image {
+  width: 100%;
+  height: 100%;
+}
+
+.vimg {
+  display: flex;
+  width: 306rpx;
+  height: 202rpx;
+  
+}
+
+.vlable {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 98rpx;
+}
+
+.lable-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.lable-price {
+  width: 100%;
+  height: 50%;
+  color: #89d40c;
+  align-items: flex-end;
+  font-size: 25rpx;
+  display: flex;
+  font-family: PingFangSC-Regular;
+}
+
+.product-storage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: PingFangSC-Regular;
+  position: absolute;
+  font-size: 25rpx;
+  left: 205rpx;
+  height: 30rpx;
+  background-color: gainsboro;
+  width: 100rpx;
+  opacity: 0.7;
+  border-radius: 10rpx;
+  top: 170rpx;
+}
+.move-img {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rpx;
+  height: 40rpx;
+  opacity: 1;
+  position: fixed;
+  }
+.cover-zero {
+  position:absolute;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:350rpx;
+  height:280rpx;
+  background-color:#d7d7d7;
+  opacity: 0.8;
+  z-index: 99;
+}
+/*
+.red-dot {
+  border-radius:100%;
+  display:flex;
+  background-color: #ff244e;
+  width:25rpx;
+  height:25rpx;
+  margin-top:-70rpx;
+  font-size:17rpx;
+  justify-content: center;
+  align-items: center;
+}  
+
+.v-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105rpx;
+  height: 105rpx;
+  top: 800rpx;
+  left: 600rpx;
+  z-index: 99;
+  position: fixed;
+  border-radius: 100%;
+  background: #fff;
+  border: 2rpx solid #d7d7d7;
+  opacity: 0.8;
+}
+
+.cart {
+  width: 75rpx;
+  height: 75rpx;
+  background: #fff;
+  margin-right:-30rpx;
+}
+*/

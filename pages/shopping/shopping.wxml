@@ -1,0 +1,48 @@
+<import src="/comms/commTemplate/tabHead/tabHead" />
+<import src="/comms/commTemplate/popup/shoppingPop" />
+<import src="/comms/commTemplate/shopping/shoppingHead" />
+
+<!--弹出产品详细信息-->
+<template is="popupImg" data="{{display:(!popFlag?'none':popFlag),itemName:itemName,oldPrice:oldPrice,newPrice:newPrice}}" />
+
+<!--购物车和小红点-->
+<view class='v-cart' id="cart" bindtap='showCart' style='z-index:99'>
+  <image src='/images/products/cart-2.png' class='cart' id="img-cart"></image>
+  <view class="red-dot">{{buyCount}}</view>
+</view>
+
+<!--页面头部的广告以及title和地址跳转-->
+<!--
+<shopping-head imgAd="/images/logo/ad-3.png" addrTxt="男二院" />
+-->
+<template is="shoppingHead" data="{{addrTxt:!addrTxt?'男二院':addrTxt}}" />
+<view style='display:{{!adimg?"flex":adimg}};width:100%;margin-top:70rpx;'>
+    <image src="/images/logo/ad-3.png" style='width:100%;height:220rpx;'></image>
+</view>
+
+<!--tab选项卡头部使用scroll-view横向滚动实现 bindscrolltolower="scrollToLower"-->
+<scroll-view scroll-x="true" 
+  style="background:white;z-index:99;white-space:nowrap;height:120rpx;margin-top:{{!tabHeadTop?3:tabHeadTop}}vh;position:{{!tabFixed? 'relative':tabFixed}};top:{{!tabTop?0:tabTop}}vh"  
+  scroll-right="{{scrollRight}}" scroll-left="{{scrollLeft}}"
+>
+
+  <view wx:for="{{tabs}}" wx:for-item="tabHeadItem" wx:for-index="tabHeadIdx" wx:key="this" 
+    class="tab-item {{currentTab==tabHeadIdx ? 'on' : ''}}" data-current="{{tabHeadIdx}}" 
+    bindtap="swichNav" style='width:25%' 
+  >
+    <template is="tabHead" data="{{imgSrc:tabHeadItem.imgSrc,imgTxt:tabHeadItem.imgTxt}}" />
+  </view>
+</scroll-view>
+
+<!--产品展示区-->
+<swiper current="{{currentTab}}" class="swiper" duration="200" 
+  style="position:{{!swiperFixed?'relative':swiperFixed}};top:{{!swiperTop?0:swiperTop}}vh;height:{{!swiperH?60:swiperH}}vh;"   bindchange="bindChange"
+>
+  <swiper-item wx:for="{{products}}" wx:key="this" style='margin-bottom:{{!itemH?0:itemH}}rpx'>
+  
+    <prod-list imgs="{{item}}" id="p{{index}}" 
+      bind:upperFlash="onPullDownRefresh" bind:buyFoo="onBuy" bind:showDetail="showDetail" bind:hideOrshow="handleShow" 
+    />
+  </swiper-item>
+  
+</swiper>

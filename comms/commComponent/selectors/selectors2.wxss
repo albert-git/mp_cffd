@@ -1,0 +1,62 @@
+/* comms/commComponent/selectors/selectors.wxss */
+.select_box{
+  background: #fff;
+  position: relative;
+  
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+  text-align: center;
+}
+.select_img{
+  width: 40rpx;
+  height: 20rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.pop-view {
+  display: flex;
+  position: fixed;
+  top:0;left:0;
+  width:100vw;
+  height:100vh;
+  background-color:rgba(118,118,118,0.3);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+}
+/**/
+.scroll-view::-webkit-scrollbar {
+  width: 0;height: 0;color: transparent;
+}
+
+.scroll-view{
+  height: 95%;
+  width:90%;
+  background: white;
+  
+}
+.list-addrs {
+  justify-content: center;
+  align-items: center;
+}
+.addr {
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  border-bottom: 1px solid #d2d2d2;
+  justify-content: center;
+  align-items: center
+}

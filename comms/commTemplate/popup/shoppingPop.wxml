@@ -1,0 +1,25 @@
+<template name="popupImg">
+  <view style='position:fixed;width:100%;height:100%;top:0;background-color:rgba(50,50,50,0.4);display:{{display}};justify-content:center;align-items:center;flex-direction:column;z-index:999' bindtap='hideMe'>
+    <view style='width:80%;height:80%;display:flex;flex-direction:column;'>
+      <view style='height:50%;width:100%;display:flex;justify-content:center;'>
+        <image src='/images/temp/demoPopup-3.png'></image>
+      </view>
+      <view style='display:flex;height:50%;flex-direction:column;margin-top:70rpx;background-color:white;padding:0 50rpx'>
+        <view style='display:flex;flex:1;align-items:center;font-family: PingFangSC-Regular;font-size: 50rpx;color: #282828;'>
+          <text>{{itemName}}</text>
+          <text>{{'bbbb'}}</text>
+        </view>
+        <view style='display:flex;flex:1;align-items:center;font-family: PingFangSC-Regular;font-size: 30rpx;color: #878787'>
+          {{"严格筛选优良大米，米粒均匀，搭配照烧酱烹制的鸡"}}
+        </view>
+        <view style='display:flex;flex:1;font-family: PingFangSC-Regular;font-size: 30rpx;color: #878787'>
+          {{"配料：大米，鸡肉，海苔，油条"}}
+        </view>
+        <view style='display:flex;flex:1;font-family: PingFangSC-Regular;font-size: 30rpx;color: #89D40C;letter-spacing: -0.4px;'>
+          {{'原价￥'+oldPrice+'  会员价￥'+newPrice}}
+        </view>
+      </view>
+    </view>
+
+  </view>
+</template>

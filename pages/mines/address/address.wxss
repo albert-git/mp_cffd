@@ -1,0 +1,88 @@
+/* pages/mines/address/address.wxss */
+page{
+  background-color: #fffafaab;
+  
+}
+.top {
+  
+  padding-top: 30rpx;
+  margin-bottom: 100rpx;
+  background-color: white;
+}
+
+view {
+  display: flex;
+  
+  font-family: PingFangSC-Regular;
+  font-size: 33rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.top,.one-2 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.one {
+  width: 100%;
+  height: 200rpx;
+  
+}
+.one-1,.three-1,.two-1{
+  justify-content: flex-start
+}
+.one,.two,.three{
+  margin-left: 60rpx;
+  
+}
+.two,.three {
+  border-top: 1px solid #d2d2d2;
+  height: 100rpx;
+  width: 100%;
+  
+}
+
+.two-1,.three-1{
+  flex:1;
+  height:100%;
+  
+}
+.two-2,.three-2{
+  flex:4;
+  height:100%;
+  justify-content: flex-start;
+  font-size: 28rpx;
+}
+.one-1 {
+  height: 100%;
+  flex:1;
+  
+  align-items: flex-start;
+  
+  justify-content: center;
+  
+}
+.one-2 {
+  flex:4;
+  height: 200rpx;
+  
+}
+.one-2>view{
+  flex:1;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sex {
+  height: 50rpx;
+  width: 100rpx;
+  
+  border-radius: 85rpx;
+  justify-content: center;
+  align-items: center;
+  margin:0 20rpx;
+  font-size: 28rpx;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"完善资料",
+  "usingComponents": {
+    "selectors": "/comms/commComponent/selectors/selectors"
+  }
+}

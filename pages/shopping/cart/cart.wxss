@@ -1,0 +1,96 @@
+/* pages/shopping/cart/cart.wxss */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+scroll-view{
+  width:740rpx;
+  height:868rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 35rpx;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  width:740rpx;
+  border-top: 1px solid #d2d2d2;
+}
+.one{
+  display: flex;
+  height: 170rpx;
+  justify-content: flex-end;
+}
+.one-1 {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  border-bottom: 1px solid #d2d2d2;
+}
+.one-1-1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20rpx;
+  margin-left: -15rpx; 
+}
+.one-1-2{
+  display: flex;
+  width:100%;
+  height:100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.one-1-2>view {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+.one-1-2-1>view{
+  width:100rpx;
+  height:47rpx;
+  border:1px solid #d2d2d2;
+  display: flex;
+  justify-content: center;
+}
+.one-1-2-1 image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.one-1-2-2{
+  height:50rpx;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+.ad-img{
+  display: flex;
+  background-size: 100% 90%;
+  width: 750rpx;
+  height:60rpx;
+}
+.ad-img-txt{
+  
+  margin-left:40rpx;
+  width:80%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  font-size:27rpx;
+  align-items:center;
+  color: #B07412
+}
+.ad-img-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+.ad-img-img>image{
+  width:35rpx;
+  height:35rpx;
+}

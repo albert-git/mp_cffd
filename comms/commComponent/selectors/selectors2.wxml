@@ -1,0 +1,22 @@
+<!--comms/commComponent/selectors/selectors.wxml-->
+
+<!--
+  @describe 地址选择view
+  @param whereToGo 调用wx.navigateTo时的url参数
+  @param addrId 被选中地址的id
+  @param addrName 被选中地址的名称
+-->
+<view class='select_box' >
+  <view class='select' bindtap='where2go' data-where="{{addrs}}">
+    <text class='select_text' id="{{addrId}}">{{addrName}}</text>
+    <image id="selectSchoolImg" class='select_img' src='/images/login/arrow-down.png'></image>
+  </view>
+</view>
+<!--弹出选择地址-->
+<view class="pop-view"  style='display:{{!popUp?"none":popUp}}'>
+  <scroll-view scroll-y="true" class='scroll-view'>
+    <view wx:for="{{addrs}}" wx:key="this" class="list-addrs" >
+      <view class='addr' bindtap='theSelectAddr' data-addr="{{item}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>

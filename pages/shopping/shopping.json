@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "prod-list": "/comms/commComponent/shopping/shopping",
+    "shopping-head": "/comms/commComponent/shopping/shoppingHead"
+  },
+  "enablePullDownRefresh": true
+  
+}

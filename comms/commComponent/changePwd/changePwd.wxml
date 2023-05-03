@@ -1,0 +1,16 @@
+<!--comms/commComponent/changePwd/changePwd.wxml-->
+<view class='top' bindtap='onAllways' >
+  <view class="one">{{!newOrold?'请输入旧的支付密码':'请输入新的支付密码'}}</view>
+  <view class='two'>
+    <view wx:for="{{[0,1,2,3,4,5]}}" wx:key="this" class='two-1'>
+      <input  type='text' disabled='true' password='true'
+      maxlength='1' value="{{pwds[index]?pwds[index]:''}}"></input>
+    </view>
+    <input  type="number" maxlength='6' bindinput='onInput' style='display:none' focus='{{!allways?true:allways}}' value='{{pwds}}'></input>  
+  </view>
+  <view class="three">
+
+     <button bindtap='onGo'
+    style='justify-content:center;width:{{!btnW?600:btnW}}rpx;height:{{!btnH?80:btnH}}rpx;border-radius:85rpx;background-color:#89d40c;display:flex;align-items:center;font-family: PingFangSC-Regular;color:{{!txtColor?"white":txtColor}}'>确定</button>
+  </view>
+</view>

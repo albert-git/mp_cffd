@@ -1,0 +1,35 @@
+<!--pages/login/codeLogin/codeLogin.wxml-->
+<import src="/comms/commTemplate/members/vouchers" />
+<view class='top'>
+  <view>
+
+  </view>
+  <view class='header '>
+    <image src='/images/logo/logo-3.png'></image>
+  </view>
+  <view class='addr'>
+    
+    <view class='addr-1' style='border-bottom:2rpx solid whitesmoke'>
+        <view><image src='/images/login/phone-2.png' style='width:34rpx;height:50rpx'></image></view>
+        <view style='margin-left:25rpx;width:90%'><input maxlength='12' type="number" placeholder='请输入手机号' style='font-size:30rpx;width:100%' bindinput='phoneInput'></input></view>
+    </view>
+    
+    <view class='addr-2'>
+      <view class="pwd" style='width:70%' >
+        <view><image src='/images/login/password-2.png' style='width:34rpx;height:50rpx'></image></view>
+        <view style='margin-left:25rpx;'><input disabled="{{cannotInput}}" placeholder='请输入验证码' style='font-size:30rpx;width:100%' bindinput='codeInput'></input></view>
+      </view>
+      <view style='width:30%;height:100%;align-items:center;justify-items:center;display:flex' bindtap='apiGetCode'>
+        <text style='font-size:25rpx;width:80%;text-align:center;color:#89d40c'>发送验证码</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='btn' style='margin-top:100rpx'>
+    <button style='display:flex;align-items:center;justify-content:center' bindtap='loginWithSmsCode'>
+      <text style='color:white;' decode='true'>登录</text>
+    </button>
+  </view>
+  <text style='margin-top:20rpx;color:#9b9b9b;font-size:30rpx'>无需注册，可直接登录</text>
+</view>
+

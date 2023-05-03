@@ -1,0 +1,26 @@
+<!--comms/commComponent/listViews/listViews.wxml-->
+<block wx:for="{{listObjects}}" wx:for-item="items" wx:for-index="idx" id='aaa' >
+  <view class='outerView' 
+  style='height:{{outerViewHeight}}rpx;border-bottom:{{idx==listObjects.length-1?0:1}}px solid gainsboro' 
+  bindtap='onSelected' id="{{outerViewName}}-{{idx}}">
+    <view style='flex:{{leftViewPercent}}'>
+      <block wx:if="{{items[0].dataType == 'img'}}">
+        <image style='width:{{leftImgWidth}}rpx;height:{{leftImgHeight}}rpx;' src="{{items[0].url}}" ></image>
+      </block>
+      <block wx:elif="{{items[0].dataType == 'txt'}}">
+        <text >{{items[0].txt}}</text>
+      </block>
+    </view>
+    <view style='flex:{{middleViewPercent}};justify-content:{{middleViewPosition}}'>
+      <text>{{items[1].txt}}</text>
+    </view>
+    <view style='flex:{{rightViewPercent}}'>
+      <block wx:if="{{items[2].dataType == 'img'}}">
+        <image style='width:{{rightImgWidth}}rpx;height:{{rightImgHeight}}rpx;' src="{{items[2].url}}" ></image>
+      </block>
+      <block wx:elif="{{items[2].dataType == 'txt'}}">
+        <text >{{items[2].txt}}</text>
+      </block>
+    </view>
+  </view>
+</block>      

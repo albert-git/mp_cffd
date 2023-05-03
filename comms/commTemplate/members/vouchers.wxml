@@ -1,0 +1,18 @@
+<template name="vouchers">
+  
+    
+    <view style='display:flex;position:relative;background-color:rgba(137,212,12,{{mySelected==index?0.3:0}});font-family: PingFangSC-Regular;'>
+      <view style='position:absolute;top:15rpx;left:60rpx;'>
+        <text style='font-size:30rpx;color:#89d40c'>¥</text>
+        <text style='font-size: 50rpx;color:#89d40c'>{{item.voucherPrice}}</text>
+      </view>
+      <view style="position:absolute;top:25rpx;left:400rpx;color:{{mySelected==index?'#89d40c':'#767676'}}">
+        <text>{{item.voucherDescribe}}</text>
+      </view>
+      <image src='/images/members/voucher-on-3.png' style='height:100rpx;width:750rpx;'></image>
+    </view>
+    <!-->
+    <view style='display:flex;align-items:center;'>
+  </view>
+  -->
+</template>

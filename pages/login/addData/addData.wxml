@@ -1,0 +1,37 @@
+<!--pages/login/addData/addData.wxml-->
+<view class='parent' style='display:flex'>
+  <view class='v-img' style='margin-bottom:20rpx'>
+    <image src='/images/login/head-2.png' style='width:100rpx;height:100rpx'></image>
+  </view>
+  <!--冒泡扑获catchtap -->
+  <view class='v-data' bind:showMySelected='onSelectTxt' >
+    <view style='justify-content:center'>
+      <text class='txt-size'>呢称</text>
+      <input style='width:80%' placeholder='请输入呢称' placeholder-style='text-align:right;font-size:15px'></input>
+    </view>
+    <view style='z-index:9999'>
+      <text class='txt-size'>性别</text>
+      <selectors outerData="{{selectData}}" style="width:80%"  ></selectors>
+      
+    </view>
+    <block wx:for="{{addrs}}" wx:for-index="idx" wx:key="this">
+    <view style='z-index:{{999-idx+1}};display:{{idx>1?"none":"flex"}}' >
+      <text class='txt-size'>{{item}}</text>
+      <selectors outerData="{{selectData}}" style="width:80%" bind:showMySelected='onSelectTxt'></selectors>
+      
+    </view>
+    </block>
+    
+    <view>
+      <text class='txt-size'>具体地址</text>
+      <input style='width:70%' disabled="true" placeholder='示例：南区宿舍14栋' placeholder-style='text-align:right;font-size:15px'></input>
+    </view>
+    
+  </view>
+  <view class='v-btn'>
+    <button style='display:flex;align-items:center;justify-content:center' bindtap='toAddData'>
+      <text style='color:white;'>下一步</text>
+    </button>
+  </view>
+  
+</view>

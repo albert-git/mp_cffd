@@ -1,0 +1,31 @@
+<import src="../../../comms/commTemplate/confirmBtn/confirmBtn" />
+<view class="top">
+  
+  <view class="one">
+    <view class='one-1' style='justify-content:flex-start'>
+      <text style='padding-top:26rpx'>联系人</text>
+    </view>
+    <view class='one-2'>
+      <view class='one-2-1' style='border-bottom:1px solid #d2d2d2'>{{!userName?"abc":userName}}</view>
+      <view class='one-2-2' bindtap='sexSelect'>
+        <view class='sex' style='border:1px solid {{man?"#89d40c":"gray"}};color:{{man?"#89d40c":"gray"}}'>先生</view>
+        <view class='sex' style='border:1px solid {{woman?"#89d40c":"gray"}};color:{{woman?"#89d40c":"gray"}}'>女士</view>
+      </view>
+    </view>
+  </view>
+  <view class="two">
+    <view class='two-1'>手机号</view>
+    <view class='two-2'>
+      <input type="number" maxlength="11" bindinput='getPhoneNum' placeholder='请输入11位手机号'></input>
+    </view>
+  </view>
+  <view class="three">
+    <view class='three-1'>地址</view>
+    <view class='three-2' style='justify-content:flex-start;align-items:center' bindtap='modiAddr'>
+      <text style='width:100%;height:80%;display:flex;align-items:center'>{{1111111111111111111}}</text>
+    </view>
+  </view>
+  
+ 
+</view>
+<template is="confirmBtn" data="{{btnTxt:'确定',btnW:600,btnH:90}}" />

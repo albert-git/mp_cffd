@@ -1,0 +1,4 @@
+<!--pages/payment/success.wxml-->
+<import src="/comms/commTemplate/payment/payResult" />
+
+<template is="success" />
